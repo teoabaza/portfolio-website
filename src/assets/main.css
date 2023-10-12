@@ -1,0 +1,157 @@
+/* Urbanist font */
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Varta font */
+@font-face {
+  font-family: 'Varta';
+  src: url('@/assets/fonts/Varta-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Varta';
+  src: url('@/assets/fonts/Varta-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Varta';
+  src: url('@/assets/fonts/Varta-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Varta';
+  src: url('@/assets/fonts/Varta-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Varta';
+  src: url('@/assets/fonts/Varta-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+  
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #090909;
+  color: #F5F5F5;
+  margin: 0;
+  font-family: 'Urbanist', Arial, Helvetica, sans-serif;
+}
+body, #app {
+  width: 100%;
+  margin: 0;
+}
+
+/* CSS for custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #d4c7ea;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a396b1;
+  height: 10px; 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #906ca5;
+}
