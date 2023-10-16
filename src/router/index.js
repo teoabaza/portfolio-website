@@ -27,7 +27,17 @@ const router = createRouter({
       name: "ContactPage",
       component: () => import('../views/ContactPage.vue')
     },
+    {
+      path: "/not-found",
+      name: "NotFound",
+      component: () => import('../views/NotFound.vue')
+    },
+    // Catch-all route for non-existing paths
+    {
+      path: "/:catchAll(.*)",
+      redirect: '/not-found'
+    }
   ]
-})
+});
 
-export default router
+export default router;

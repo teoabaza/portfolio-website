@@ -121,7 +121,7 @@
           <p>behaviour management web application</p>
         </div>
         <img src="@/assets/images/project1.png" class="project-showcase-img parallax-img"/>
-        <div class="learn-more-btn-container"><button>learn more...</button></div>
+        <div class="learn-more-btn-container"><button @click="router.push('/project1')">learn more...</button></div>
       </div>
       <div class="project2">
         <div class="project-details">
@@ -129,7 +129,7 @@
           <p>task management web application</p>
         </div>
         <img src="@/assets/images/project2.png" class="project-showcase-img parallax-img"/>
-        <div class="learn-more-btn-container"><button>learn more...</button></div>
+        <div class="learn-more-btn-container" @click="router.push('/project2')"><button>learn more...</button></div>
       </div>
       <div class="project3">
         <div class="project-details">
@@ -137,7 +137,7 @@
           <p>quizzes and flaschards creation tool</p>
         </div>
         <img src="@/assets/images/project3.png" class="project-showcase-img parallax-img"/>
-        <div class="learn-more-btn-container"><button>learn more...</button></div>
+        <div class="learn-more-btn-container"><button @click="router.push('/project3')">learn more...</button></div>
       </div>
     </div>
     <!-- contact section -->
@@ -161,6 +161,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import router from '../router';
 import emailjs from 'emailjs-com';
 import { loading, notify } from '../hooks/globals';
 
@@ -232,7 +233,7 @@ h2 span {
   color: #E784A0;
 }
 .subtitle {
-  color: #B4ACAE;
+  color: #d0cdce;
   margin: 1rem 2.5rem;
   font-weight: 400;
 }
@@ -391,7 +392,6 @@ h2 span {
 .send-btn-container {
   display: flex;
   justify-content: center;
-  padding-right: 1rem;
   margin-top: 2rem;
 }
 .send-btn-container button {
@@ -406,7 +406,7 @@ h2 span {
   cursor: pointer;
 }
 .send-btn-container button:hover {
-  background-color: rgba(149, 142, 149, 0.25);
+  background-color: rgba(192, 139, 182, 0.25);
 }
 .social-icons-container {
   margin: 4rem 0 1rem 0;
@@ -414,6 +414,9 @@ h2 span {
 .social-icon {
   width: 3.5rem;
   margin: 0 0.5rem 0 0.5rem;
+}
+.social-icon:hover {
+  opacity: 0.6;
 }
 .parallax-img {
   transition: transform 0.3s ease-out;

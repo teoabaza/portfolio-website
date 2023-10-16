@@ -1,16 +1,24 @@
 <template>
   <div class="navbar">
     <ul class="navbar-items">
-      <li><a href="/home">Home</a></li>
-      <li><a href="/about">About me</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li :class="{ 'active': currentRoute == '/home' || currentRoute == '/' }"><a href="/home">Home</a></li>
+      <li :class="{ 'active': currentRoute == '/about' }"><a href="/about">About me</a></li>
+      <li :class="{ 'active': currentRoute == '/projects' }"><a href="/projects">Projects</a></li>
+      <li :class="{ 'active': currentRoute == '/contact' }"><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
 
+const currentRoute = ref(window.location.pathname);
+
+onMounted(() => {
+  window.addEventListener('popstate', () => {
+    currentRoute.value = window.location.pathname;
+  });
+});
 </script>
 
 <style scoped>
@@ -32,6 +40,9 @@
   cursor: pointer;
 }
 .navbar-items a:hover {
+  color: #E784A0;
+}
+.active {
   color: #E784A0;
 }
 </style>
