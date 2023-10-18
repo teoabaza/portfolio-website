@@ -94,6 +94,9 @@ import router from '../router';
   font-size: 1.3rem;
   margin-left: 0.5rem;
 }
+.social-link span:hover {
+  color: #e784a0;
+}
 .social-icon {
   width: 50px;
 }

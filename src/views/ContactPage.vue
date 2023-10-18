@@ -1,23 +1,34 @@
 <template>
   <div class="contact-page">
-    <div class="intro">
+
+    <div class="contact-intro-mobile">
       <p>Interested in working together?</p>
       <p>I’m happy to have a chat.</p>
     </div>
-    <h2>Send me a <span>message</span></h2>
-    <div class="contact-inputs-container">
-      <input type="text" class="name-input" placeholder="name..." v-model="emailParams.sender_name"/>
-      <input type="email" class="email-input" placeholder="email..." v-model="emailParams.sender_email"/>
-      <textarea placeholder="message..." class="message-input" v-model="emailParams.sender_message"></textarea>
-    </div>
-    <div class="send-btn-container"><button @click="sendEmail">send</button></div>
-    <div class="social-icons-container">
-      <a href="https://www.linkedin.com/in/teodoraabaza/" target="_blank"><img src="@/assets/icons/linkedin.png" class="social-icon"/></a>
-      <a href="https://github.com/teoabaza" target="_blank"><img src="@/assets/icons/github.png" class="social-icon"/></a>
-      <a href="mailto:teodoraabaza@gmail.com" target="_blank"><img src="@/assets/icons/mail.png" class="social-icon"/></a>
-    </div>
 
-    <img src="@/assets/images/logo-white.png" class="logo-white"/>
+    <div class="send-msg-section">
+      <h2>Send me a <span>message</span></h2>
+      <div class="contact-inputs-container">
+        <input type="text" class="name-input" placeholder="name..." v-model="emailParams.sender_name"/>
+        <input type="email" class="email-input" placeholder="email..." v-model="emailParams.sender_email"/>
+        <textarea placeholder="message..." class="message-input" v-model="emailParams.sender_message"></textarea>
+      </div>
+      <div class="send-btn-container"><button @click="sendEmail">send</button></div>
+    </div>
+    
+    <div class="socials-details">
+      <div class="contact-intro-desktop">
+        <p>Interested in working together?</p>
+        <p>I’m happy to have a chat.</p>
+      </div>
+      <div class="social-icons-container">
+        <a href="https://www.linkedin.com/in/teodoraabaza/" target="_blank"><img src="@/assets/icons/linkedin.png" class="social-icon"/></a>
+        <a href="https://github.com/teoabaza" target="_blank"><img src="@/assets/icons/github.png" class="social-icon"/></a>
+        <a href="mailto:teodoraabaza@gmail.com" target="_blank"><img src="@/assets/icons/mail.png" class="social-icon"/></a>
+      </div>
+
+      <img src="@/assets/images/logo-white.png" class="logo-white"/>
+    </div>
   </div>
 </template>
 
@@ -62,12 +73,15 @@ function sendEmail(){
   align-items: center;
   text-align: center;
 }
-.intro {
+.contact-intro-mobile {
   margin: 1rem 0;
 }
-.intro p {
+.contact-intro-mobile p {
   background-color: #090909;
   margin: 0.5rem 0;
+}
+.contact-intro-desktop {
+  display: none;
 }
 h2 {
   font-weight: 400;
@@ -99,6 +113,9 @@ h2 span {
   font-size: 0.75rem;
   font-weight: 300;
   color: #c0a5ac;
+}
+.message-input {
+  min-height: 100px;
 }
 .send-btn-container {
   display: flex;

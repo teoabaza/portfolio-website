@@ -1,5 +1,10 @@
 <template>
-  <div class="navbar">
+  <div :class="(currentRoute == '/home' || currentRoute == '/') ? 'navbar nav-desktop' : 'navbar'">
+    <div id="job-title" v-if="currentRoute == '/home' || currentRoute == '/'">
+      <h4>Teo Abaza</h4>
+      <p>Software Developer</p>
+      <p>UI/UX Designer</p>
+    </div>
     <ul class="navbar-items">
       <li :class="{ 'active': currentRoute == '/home' || currentRoute == '/' }"><a href="/home">Home</a></li>
       <li :class="{ 'active': currentRoute == '/about' }"><a href="/about">About me</a></li>
@@ -10,7 +15,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 
 const currentRoute = ref(window.location.pathname);
 
@@ -19,6 +24,13 @@ onMounted(() => {
     currentRoute.value = window.location.pathname;
   });
 });
+
+watch(currentRoute, (newValue, oldValue)=>{
+  if(newValue && newValue!=oldValue && newValue!='/home'){
+    document.getElementById('job-title').style.display = 'none';
+  }
+});
+
 </script>
 
 <style scoped>
@@ -44,5 +56,19 @@ onMounted(() => {
 }
 .active {
   color: #E784A0;
+}
+#job-title {
+  display: none;
+  margin: 0 3rem;
+}
+#job-title h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+#job-title p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #BAB9B9;
 }
 </style>

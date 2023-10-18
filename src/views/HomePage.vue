@@ -2,8 +2,10 @@
   <div class="home-page">
     <!-- hello and photo section -->
     <div class="hello-section">
-      <h2>Hello World! I’m <span>Teo</span>.</h2>
-      <p class="subtitle">I'm a full stack web developer based in Sheffield, UK.</p>
+      <div class="hello-section-text">
+        <h2>Hello World! I’m <span>Teo</span>.</h2>
+        <p class="subtitle">I'm a full stack web developer based in Sheffield, UK.</p>
+      </div>
       <img src="@/assets/images/Teo-pink.png" class="teo-pink-img"/>
     </div>
     <!-- my skills section -->
@@ -116,28 +118,31 @@
     <div class="projects-section">
       <h2>My work</h2>
       <div class="project1">
-        <div class="project-details">
+        <div class="project1-details">
           <h3>Sandbach School Cautions Register</h3>
           <p>behaviour management web application</p>
+          <div class="learn-more-btn-container-desktop"><button @click="router.push('/project1')">learn more...</button></div>
         </div>
-        <img src="@/assets/images/project1.png" class="project-showcase-img parallax-img"/>
-        <div class="learn-more-btn-container"><button @click="router.push('/project1')">learn more...</button></div>
+        <img src="@/assets/images/project1.png" id="proj-img-1" class="project-showcase-img parallax-img"/>
+        <div class="learn-more-btn-container-mobile"><button @click="router.push('/project1')">learn more...</button></div>
       </div>
       <div class="project2">
-        <div class="project-details">
+        <div class="project2-details">
           <h3>Workfolio</h3>
           <p>task management web application</p>
+          <div class="learn-more-btn-container-desktop" @click="router.push('/project2')"><button>learn more...</button></div>
         </div>
-        <img src="@/assets/images/project2.png" class="project-showcase-img parallax-img"/>
-        <div class="learn-more-btn-container" @click="router.push('/project2')"><button>learn more...</button></div>
+        <img src="@/assets/images/project2.png" id="proj-img-2" class="project-showcase-img parallax-img"/>
+        <div class="learn-more-btn-container-mobile" @click="router.push('/project2')"><button>learn more...</button></div>
       </div>
       <div class="project3">
-        <div class="project-details">
+        <div class="project3-details">
           <h3>Quizzy</h3>
           <p>quizzes and flaschards creation tool</p>
+          <div class="learn-more-btn-container-desktop"><button @click="router.push('/project3')">learn more...</button></div>
         </div>
-        <img src="@/assets/images/project3.png" class="project-showcase-img parallax-img"/>
-        <div class="learn-more-btn-container"><button @click="router.push('/project3')">learn more...</button></div>
+        <img src="@/assets/images/project3.png" id="proj-img-3" class="project-showcase-img parallax-img"/>
+        <div class="learn-more-btn-container-mobile"><button @click="router.push('/project3')">learn more...</button></div>
       </div>
     </div>
     <!-- contact section -->
@@ -155,6 +160,8 @@
         <a href="mailto:teodoraabaza@gmail.com" target="_blank"><img src="@/assets/icons/mail.png" class="social-icon"/></a>
       </div>
     </div>
+
+    <p class="designed-by">2023 | Designed by Teo with ♡</p>
     
   </div>
 </template>
@@ -324,16 +331,16 @@ h2 span {
   background-color: #BB3B5A;
   padding: 1rem 1rem 2rem 1rem;
 }
-.project-details {
+.project1-details, .project2-details, .project3-details {
   width: 50%;
   margin: 3rem 0 1rem 3rem;
   text-align: left;
 }
-.project-details h3 {
+.project1-details h3, .project2-details h3, .project3-details h3 {
   font-weight: 300;
   font-size: 1.2rem;
 }
-.project-details p {
+.project1-details p, .project2-details p, .project3-details p {
   font-weight: 200;
   font-size: 0.9rem;
   padding-right: 1rem;
@@ -341,13 +348,13 @@ h2 span {
 .project-showcase-img {
   width: 100%;
 }
-.learn-more-btn-container {
+.learn-more-btn-container-mobile {
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
   margin-top: 2rem;
 }
-.learn-more-btn-container button {
+.learn-more-btn-container-desktop button, .learn-more-btn-container-mobile button {
   font-size: 1rem;
   border-radius: 5px;
   background-color: rgba(149, 142, 149, 0.14);
@@ -358,8 +365,11 @@ h2 span {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
 }
-.learn-more-btn-container button:hover {
+.learn-more-btn-container-desktop button:hover {
   background-color: rgba(149, 142, 149, 0.25);
+}
+.learn-more-btn-container-desktop {
+  display: none;
 }
 .contact-section {
   width: 100%;
@@ -388,6 +398,9 @@ h2 span {
   font-size: 0.75rem;
   font-weight: 300;
   color: #c0a5ac;
+}
+.message-input {
+  min-height: 100px;
 }
 .send-btn-container {
   display: flex;
@@ -420,5 +433,9 @@ h2 span {
 }
 .parallax-img {
   transition: transform 0.3s ease-out;
+}
+.designed-by {
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 </style>

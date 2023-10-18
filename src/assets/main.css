@@ -162,3 +162,258 @@ body, #app {
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
 }
+
+/* Media queries for desktop devices and larger screens*/
+@media only screen and (min-width: 700px) {
+  .nav-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 1rem !important;
+  }
+  .navbar-items {
+    margin: 3rem 2rem 0 2rem;
+  }
+  #job-title {
+    display: block !important;
+  }
+  .hello-section {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 8rem);
+    align-items: center;
+  }
+  .hello-section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 400px;
+    padding-bottom: 5rem;
+  }
+  .hello-section-text h2 {
+    margin: 0;
+    font-size: 1.7rem;
+  }
+  .hello-section-text .subtitle {
+    font-size: 1.7rem;
+    color: #F5F5F5 !important;
+    margin: 0 !important;
+  }
+  .teo-pink-img {
+    max-width: 30% !important;
+    margin: 0;
+  }
+  .skills-boxes {
+    max-width: 500px;
+  }
+  .skills-section h2 {
+    width: fit-content;
+    padding-left: 4rem !important;
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+  }
+  .project1, .project2, .project3 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .project1, .project3 {
+    flex-direction: row-reverse;
+  }
+  .project3 {
+    padding: 4rem 0 !important;
+  }
+  #proj-img-1, #proj-img-2, #proj-img-3 {
+    width: 70%;
+  }
+  #proj-img-3 {
+    margin-left: 2rem;
+  }
+  .projects-section h2 {
+    width: fit-content;
+    padding-left: 4rem !important;
+    font-size: 2rem !important;
+    font-weight: 300 !important;
+  }
+  .project1-details, .project2-details, .project3-details {
+    max-width: 300px;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+  .project1-details, .project3-details {
+    margin: 0 1rem 0 -1rem !important;
+  }
+  .project1-details h3, .project2-details h3, .project3-details h3 {
+    font-size: 1.7rem !important;
+  }
+  .project1-details p, .project2-details p, .project3-details p {
+    font-size: 1rem !important;
+    max-width: 200px;
+    padding: 0 !important;
+    margin: 0;
+  }
+  .learn-more-btn-container-mobile {
+    display: none !important;
+  }
+  .learn-more-btn-container-desktop {
+    display: block !important;
+    margin-top: 2rem;
+  }
+  .email-input, .name-input, .message-input {
+    max-width: 300px;
+  }
+  .about-page {
+    padding: 0 2rem;
+  }
+  .intro-box, .thank-you-box, .get-in-touch-container p {
+    max-width: 40vw !important;
+  }
+  .my-story-pink-box, .my-approach-pink-box {
+    max-width: 50vw !important;
+    padding: 2rem !important;
+  }
+  .my-life-pink-box {
+    max-width: 40vw !important;
+    padding: 2rem !important;
+  }
+  .projects-page {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  .project-box {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .contact-page {
+    flex-direction: row !important;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  .contact-intro-mobile {
+    display: none !important;
+  }
+  .contact-intro-desktop {
+    display: block !important;
+  }
+  .socials-details {
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #job-title{
+    margin: 0 0 0 8rem !important;
+  }
+  .hello-section {
+    width: calc(100% - 16rem);
+  }
+  .hello-section-text {
+    max-width: 50vw;
+    line-height: 1.5;
+  }
+  .hello-section-text h2, .hello-section-text .subtitle {
+    font-size: 2.5rem !important;
+  }
+  .intro-box h3 {
+    font-size: 1.2rem !important;
+  }
+  .intro-box p {
+    font-size: 1.1rem !important;
+  }
+  .my-story-pink-box h3, .my-approach-pink-box h3, .my-life-pink-box h3 {
+    font-size: 1.6rem !important;
+  }
+  .my-story-pink-box p, .my-approach-pink-box p, .my-life-pink-box p {
+    font-size: 1rem !important;
+  }
+  .social-link span {
+    font-size: 1.6rem !important;
+  }
+  .thank-you-box {
+    font-size: 1.1rem !important;
+    margin-top: 3.5rem !important;
+  }
+  .teo-pic {
+    width: 15rem !important;
+  }
+  .get-in-touch-container p {
+    font-size: 1.2rem !important;
+  }
+  .project1-details p, .project2-details p, .project3-details p {
+    max-width: 230px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hello-section-text h2, .hello-section-text .subtitle {
+    font-size: 2.8rem !important;
+  }
+  .teo-pink-img {
+    padding-bottom: 4rem;
+  }
+  .skills-section {
+    padding-bottom: 5rem !important;
+  }
+  .skills-section h2, .projects-section h2 {
+    font-size: 2.5rem !important;
+    margin-bottom: 0;
+  }
+  .flip-box {
+    width: 6rem !important;
+    height: 6rem !important;
+    margin: 1rem 0.1rem !important;
+  }
+  .skills-boxes {
+    max-width: 650px;
+  }
+  .flip-box-back-text{
+    font-size: 1.2rem !important;
+  }
+  #proj-img-1, #proj-img-2, #proj-img-3 {
+    width: 60%;
+  }
+  .project1-details h3, .project2-details h3, .project3-details h3 {
+    font-size: 2.2rem !important;
+  }
+  .project1-details p, .project2-details p, .project3-details p {
+    font-size: 1.2rem !important;
+  }
+  .contact-section {
+    padding: 4rem 0 !important;
+  }
+  .contact-section h2 {
+    font-size: 2.2rem !important;
+  }
+  .send-msg-section h2 {
+    font-size: 2.2rem !important;
+  }
+  .contact-intro-desktop p {
+    font-size: 1.3rem;
+    margin: 0.6rem;
+  }
+  .send-btn-container button {
+    font-size: 1.3rem !important;
+    padding: 0.7rem 2rem !important;
+  }
+  .project-box {
+    width: 13rem !important;
+    height: 13rem !important;
+  }
+  .project-box h3 {
+    font-size: 1.65rem !important;
+  }
+  .project-box p {
+    font-size: 1.1rem !important;
+  }
+  .my-story-pink-box, .my-approach-pink-box {
+    max-width: 600px !important;
+  }
+  .my-life-pink-box {
+    max-width: 500px !important;
+  }
+}
